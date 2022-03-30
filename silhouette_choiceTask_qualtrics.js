@@ -18,7 +18,7 @@ Qualtrics.SurveyEngine.addOnload(function () {
         task_github + "jspsych-6.3.1/jspsych.js",
         task_github + "jspsych-6.3.1/plugins/jspsych-html-keyboard-response.js",
         task_github + "jspsych-6.3.1/plugins/jspsych-image_button-response.js",
-        task_github + "choiceTask_main.js"
+        task_github + "silhouette_choiceTask_main.js"
     ];
 
     function loadScript(idx) {
