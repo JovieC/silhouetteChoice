@@ -2,15 +2,19 @@
         var timeline = [];
 
         /* choice task data by trial */
-        // var images = issue_list.map(x => "https://joviec.github.io/silhouette_choiceTask/img/finalPics FemaleG1Age0.1P2FemaleG5Age21P1MaleG3Age8P1MaleG2Age3P2.png");
 
-        // var preload = {
-        //     type: 'preload',
-        //     auto_preload: true,
-        //     images: images
-        // }
+// var image = ['finalPics FemaleG1Age0.1P2FemaleG5Age21P1MaleG3Age8P1MaleG2Age3P2.png'];
+// // var images = ['img/finalPics FemaleG1Age0.1P2FemaleG5Age21P1MaleG3Age8P1MaleG2Age3P2.png'];
 
-        // timeline.push(preload);
+// // // these array can be passed into the preload plugin using the images, audio 
+// // // and video parameters
+// var preload = {
+//      type: 'preload',
+//      images: image
+// }
+
+// timeline.push(preload);
+
 
         /* randomize trials */
         // var shuffleTrials = jsPsych.randomization.repeat(images,1);
@@ -24,12 +28,17 @@
         
 
         var trial = {
-                 type: 'image-button-response',
-                 stimulus: 'img/finalPics FemaleG1Age0.1P2FemaleG5Age21P1MaleG3Age8P1MaleG2Age3P2.png',
-                 choices: [' ', ' '],
-                 data: values
-             };
-             timeline.push(trial);
+            type: 'image-button-response',
+            stimulus:  'finalPics FemaleG1Age0.1P2FemaleG5Age21P1MaleG3Age8P1MaleG2Age3P2.png',
+            choices: ['1', '2', '3', '4'],
+        };
+        timeline.push(trial);
+
+            // create an empty html string
+    var html = '';
+
+
+
 
         /* instructions
         var baselineInstruction = {
