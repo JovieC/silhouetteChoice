@@ -2,18 +2,18 @@
         var timeline = [];
 
         /* choice task data by trial */
-        var images = issue_list.map(x => "https://joviec.github.io/silhouette_choiceTask/img/");
+        // var images = issue_list.map(x => "https://joviec.github.io/silhouette_choiceTask/img/finalPics FemaleG1Age0.1P2FemaleG5Age21P1MaleG3Age8P1MaleG2Age3P2.png");
 
-        var preload = {
-            type: 'preload',
-            auto_preload: true,
-            images: images
-        }
+        // var preload = {
+        //     type: 'preload',
+        //     auto_preload: true,
+        //     images: images
+        // }
 
-        timeline.push(preload);
+        // timeline.push(preload);
 
         /* randomize trials */
-        var shuffleTrials = jsPsych.randomization.repeat(images,1);
+        // var shuffleTrials = jsPsych.randomization.repeat(images,1);
 
         
         var welcome = {
@@ -25,7 +25,7 @@
 
         var trial = {
                  type: 'image-button-response',
-                 stimulus: images
+                 stimulus: 'img/finalPics FemaleG1Age0.1P2FemaleG5Age21P1MaleG3Age8P1MaleG2Age3P2.png',
                  choices: [' ', ' '],
                  data: values
              };
