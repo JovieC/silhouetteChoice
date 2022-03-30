@@ -23,6 +23,14 @@
         timeline.push(welcome);
         
 
+        var trial = {
+                 type: 'image-button-response',
+                 stimulus: images
+                 choices: [' ', ' '],
+                 data: values
+             };
+             timeline.push(trial);
+
         /* instructions
         var baselineInstruction = {
             type: "html-keyboard-response",
@@ -36,24 +44,24 @@
 
         
         
-        for (var values of shuffleTrials) {
-            var fixation = {
-                type: 'html-keyboard-response',
-                stimulus: '<p style="font-size:x-large;">+</p>',
-                trial_duration: 1000,
-                response_ends_trial: false
-            };
-            timeline.push(fixation);
+        // for (var values of shuffleTrials) {
+        //     var fixation = {
+        //         type: 'html-keyboard-response',
+        //         stimulus: '<p style="font-size:x-large;">+</p>',
+        //         trial_duration: 1000,
+        //         response_ends_trial: false
+        //     };
+        //     timeline.push(fixation);
 
-            var trial = {
-                type: 'image-button-response',
-                stimulus: images
-                choices: [' ', ' '],
-                data: values
-            };
-            timeline.push(trial);
+        //     var trial = {
+        //         type: 'image-button-response',
+        //         stimulus: images
+        //         choices: [' ', ' '],
+        //         data: values
+        //     };
+        //     timeline.push(trial);
 
-        }
+        // }
 
         var debrief_block = {
             type: "html-keyboard-response",
