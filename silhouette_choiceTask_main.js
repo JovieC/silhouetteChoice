@@ -28,7 +28,7 @@
         
 
         var trial = {
-            type: 'image-button-response',
+            type: 'html-button-response',
             stimulus:  'finalPics FemaleG1Age0.1P2FemaleG5Age21P1MaleG3Age8P1MaleG2Age3P2.png',
             choices: ['1', '2', '3', '4'],
         };
