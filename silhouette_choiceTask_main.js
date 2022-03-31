@@ -2,15 +2,14 @@ var STIM_N = 120; // number of trials in choice task
 
 var timeline = [];
 
-// var pic = pic_list.map(x => "https://joviec.github.io/silhouetteTask/img/" + x.name);
+var images = pic_list.map(x => "https://joviec.github.io/silhouetteTask/img/" + x.name);
+var preload = {
+      type:'preload',
+      auto_preload:true,
+      images: images
+  };
 
-// var preload = {
-//      type:'preload',
-//      auto_preload:true,
-//      images: pic
-//  };
-
-// timeline.push(preload);
+//timeline.push(preload);
 
 var welcome = {
             type: "html-keyboard-response",
@@ -22,36 +21,34 @@ timeline.push(welcome);
 //var shuffleTrials = jsPsych.randomization.repeat(pic,1);
 //console.log(shuffleTrials[1]);
 
-//for (var values of shuffleTrials) {
-                var fixation = {
-                    type: 'html-keyboard-response',
-                    stimulus: '+',
-                    choices: jsPsych.NO_KEYS,
-                    trial_duration: 500,
-                    response_ends_trial: false
-                };
-                timeline.push(fixation);
 
-                var trial = {
-                    type: 'html-button-response',
-                    stimulus: '<img src=https://joviec.github.io/silhouetteTask/img/finalPics FemaleG1Age0.2P2FemaleG6Age67P1MaleG4Age14P2MaleG2Age2P2.png'
-                    //function () {
-                      //  return '<img src="https://joviec.github.io/silhouetteTask/img/finalPics FemaleG1Age0.2P2FemaleG6Age67P1MaleG4Age14P2MaleG2Age2P2.png'//+jsPsych.timelineVariable("name", true)+'">'
-                        //},
-                    choices: ['1', '2', '3', '4'],
-                    //data: values
-                        
-                };
+var fixation = {
+    type: 'html-keyboard-response',
+    stimulus: '+',
+    choices: jsPsych.NO_KEYS,
+    trial_duration: 500,
+    response_ends_trial: false
+};
+timeline.push(fixation);
 
-                timeline.push(trial);
-                //}
+var trial = {
+    type: 'html-button-response',
+    stimulus: function () {
+        return '<img src="https://joviec.github.io/silhouetteTask/img/'+jsPsych.timelineVariable("name")
+        },
+    choices: ['1', '2', '3', '4'],
+    //data: values             
+};
 
-            var trials_with_variables1 = {
-                timeline: [fixation, trial],
-                timeline_variables: pic_list//.slice(0,STIM_N/2)
-            };
+timeline.push(trial);
+                
 
-            timeline.push(trials_with_variables1);
+// var trials_with_variables1 = {
+//     timeline: [fixation, trial],
+//     timeline_variables: pic_list//.slice(0,STIM_N/2)
+//     };
+
+// timeline.push(trials_with_variables1);
 
 var debrief_block = {
             type: "html-keyboard-response",

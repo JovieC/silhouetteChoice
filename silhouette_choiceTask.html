@@ -5,17 +5,20 @@
         <script src="jspsych-6.3.1/jspsych.js"></script>
         <script src="jspsych-6.3.1/plugins/jspsych-html-keyboard-response.js"></script>
         <script src="jspsych-6.3.1/plugins/jspsych-html-button-response.js"></script>
-        <script src="silhouette_choiceTask_main.js"></script>
+        <script src="jspsych-6.3.1/plugins/jspsych-preload.js"></script>
         <link href="jspsych-6.3.1/css/jspsych.css" rel="stylesheet" type="text/css">
+        <script src="silhouette_choiceTask_main.js"></script>
+        <script src="piclist.js"></script>
     </head>
     <body></body>
     <script>
-
+        
         jsPsych.init({
-            timeline: timeline,
+            timeline: [preload, timeline],
             on_finish: function() {
                 jsPsych.data.displayData('csv');
             },
+
         });
 
     </script>
