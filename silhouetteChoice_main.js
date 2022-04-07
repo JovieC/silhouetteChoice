@@ -1,5 +1,14 @@
 var timeline = [];
-var repo_site = "https://joviec.github.io/silhouetteTask/img/";
+var repo_site = "https://joviec.github.io/silhouetteChoice/img/";
+
+//var images_block_1 = ['img/finalPicsFemaleG1Age0.1P2FemaleG5Age21P1MaleG3Age8P1MaleG2Age3P2.png', 'img/finalPicsFemaleG1Age0.2P2FemaleG6Age67P1MaleG4Age14P2MaleG2Age2P2.png'];
+
+// preload trial for preloading the block 1 stimuli
+// var preload_1 = {
+//     type: 'preload',
+//     images: images_block_1
+// }
+// timeline.push(preload_1);
 
 var pic_list = [
  {
@@ -724,14 +733,24 @@ var pic_list = [
  }
 ]
 
-var images = pic_list.map(x => "https://joviec.github.io/silhouetteTask/img/" + x.name);
-var preload = {
-      type:'preload',
-      auto_preload:true,
-      images: images
-  };
+// for(i = 0; i < pic_list.length; i++) {
+//   var picture = new Object();
+//   picture.name = repo_site + pic_list.name[i];
+//   timeline.push(picture);
+// }
 
-timeline.push(preload);
+//var images = issue_list.map(x => "https://social-cognitive-neuroscience-lab.github.io/SocialValuesTask/img/" + x.For);
+
+// var images = pic_list.map(x => "https://joviec.github.io/silhouetteChoice/img/" + x.name);
+// var preload_pic = {
+//       type:'preload',
+//       auto_preload:true,
+//       images: images,
+//       max_load_time: 1000000
+//   };
+
+// timeline.push(preload_pic);
+
 
 var welcome = {
             type: "html-keyboard-response",
@@ -740,45 +759,39 @@ var welcome = {
 
 timeline.push(welcome);
 
-//var shuffleTrials = jsPsych.randomization.repeat(pic,1);
-//console.log(shuffleTrials[1]);
+var picture = [];
+//var picture = '<img src="https://joviec.github.io/silhouetteChoice/img/finalPicsFemaleG1Age0.1P2FemaleG5Age21P1MaleG3Age8P1MaleG2Age3P2.png"/>'
+for (i = 0; i < pic_list.length; i++) {
+  var source = "<img src=\"" + "https://joviec.github.io/silhouetteChoice/img/" + pic_list[i].name + "\"/>";
+  picture.push(source);
+}
 
 
-// var fixation = {
-//     type: 'html-keyboard-response',
-//     stimulus: '+',
-//     choices: jsPsych.NO_KEYS,
-//     trial_duration: 500,
-//     response_ends_trial: false
-// };
-// timeline.push(fixation);
+var shuffleTrials = jsPsych.randomization.repeat(picture,1);
 
-// for (j = 0; j < pic_list.length; j++) {
-//   var stimname;
-//   stimname = repo_site + pic_list.name[j];
-//   console.log(stimname);
-// }
-
-// var shuffleTrials = jsPsych.randomization.repeat(stimname,1);
-
-// for (var values of shuffleTrials) {
+for (var values of shuffleTrials) {
   var fixation = {
       type: 'html-keyboard-response',
-      stimulus: 'Please press [D] to <b>give up</b> the person on the left and [K] to <b>give up</b> the person on the right. <br><br><br><br> +',
+      stimulus: '+',
       choices: jsPsych.NO_KEYS,
       trial_duration: 500,
       response_ends_trial: false
   };
   timeline.push(fixation);
 
-  // var trial = {
-  //     type: 'html-button-response',
-  //     stimulus: values,
-  //     choices: ['d','k'],
-  //     prompt: "<p> hello </p>"
-  // };
-  // timeline.push(trial);
-  //};
+  var trial = {
+      type: 'html-button-response',
+      stimulus: values,
+      //stimulus: '<img src="https://joviec.github.io/silhouetteChoice/img/finalPicsFemaleG1Age0.1P2FemaleG5Age21P1MaleG3Age8P1MaleG2Age3P2.png"/>',
+      choices: [' ',' ',' ',' '],
+      button_html: ['<button class="jspsych-btn" style = "position:absolute; left:460px; top: 220px">%choice%</button>', 
+                    '<button class="jspsych-btn" style = "position:absolute; right:460px; top: 220px">%choice%</button>',
+                    '<button class="jspsych-btn" style = "position:absolute; left:460px; top: 550px">%choice%</button>',
+                    '<button class="jspsych-btn" style = "position:absolute; right:460px; top: 550px">%choice%</button>']
+      //prompt: "<p> hello </p>"
+  };
+  timeline.push(trial);
+  };
               
 
 // var trials_with_variables1 = {
@@ -788,12 +801,12 @@ timeline.push(welcome);
 
 // timeline.push(trials_with_variables1);
 
-// var debrief_block = {
-//             type: "html-keyboard-response",
-//             stimulus: function() {
-//                 var responseTimes = jsPsych.data.get().select('rt');
-//                 var userChoice = jsPsych.data.get().select('response');
-//             return `<p>Press any key to complete the experiment. Thank you!</p>`;
-//             }
-//             };
-//         timeline.push(debrief_block);
+var debrief_block = {
+            type: "html-keyboard-response",
+            stimulus: function() {
+                //var responseTimes = jsPsych.data.get().select('rt');
+                //var userChoice = jsPsych.data.get().select('response');
+            return `<p>Press any key to complete the experiment. Thank you!</p>`;
+            }
+            };
+        timeline.push(debrief_block);

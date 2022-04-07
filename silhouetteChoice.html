@@ -14,7 +14,7 @@
     <script>
         
         jsPsych.init({
-            timeline: [preload, timeline],
+            timeline: timeline,
             on_finish: function() {
                 jsPsych.data.displayData('csv');
             },
