@@ -11,7 +11,7 @@ Qualtrics.SurveyEngine.addOnload(function () {
     qthis.hideNextButton();
 
     /* Change 2: Defining and load required resources */
-    var task_github = "https://joviec.github.io/silhouette_choiceTask/"; // https://<your-github-username>.github.io/<your-experiment-name>
+    var task_github = "https://joviec.github.io/silhouetteChoice/"; // https://<your-github-username>.github.io/<your-experiment-name>
 
     // requiredResources must include all the JS files that demo-simple-rt-task-transformed.html uses.
     var requiredResources = [
@@ -19,7 +19,7 @@ Qualtrics.SurveyEngine.addOnload(function () {
         task_github + "jspsych-6.3.1/plugins/jspsych-html-keyboard-response.js",
         // task_github + "jspsych-6.3.1/plugins/jspsych-image_button-response.js",
         task_github + "jspsych-6.3.1/plugins/jspsych-html_button-response.js",
-        task_github + "silhouette_choiceTask_main.js"
+        task_github + "silhouetteChoice_main.js"
     ];
 
     function loadScript(idx) {

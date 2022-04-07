@@ -1,6 +1,6 @@
 // create a list of all images so we can tell jsPsych to
 // preload them for speed (see jsPsych.init below)
-var people = ["https://joviec.github.io/silhouetteTask/img/"];
+var people = ["https://joviec.github.io/silhouetteChoice/img/"];
 
 
 
