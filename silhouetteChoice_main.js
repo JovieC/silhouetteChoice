@@ -757,7 +757,7 @@ timeline.push(fixation);
 var trial = {
     type: 'html-button-response',
     stimulus: function () {
-        return '<img src="https://joviec.github.io/silhouetteTask/img/'+jsPsych.timelineVariable("name")
+        return '<img src="https://joviec.github.io/silhouetteChoice/img/'+jsPsych.timelineVariable("name")
         },
     choices: ['1', '2', '3', '4'],
     //data: values             
