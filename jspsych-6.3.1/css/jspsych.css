@@ -56,15 +56,36 @@
 }
 
 /* borrowing Bootstrap style for btn elements, but combining styles a bit */
-.jspsych-btn {
-  display: inline-block;
-  padding: 6px 12px;
+/*.jspsych-btn {
+  position: relative;
+  padding: 12px 12px;
   margin: 0px;
   font-size: 20px;
   font-weight: 400;
   font-family: 'Open Sans', 'Arial', sans-serif;
   cursor: pointer;
   line-height: 3;
+  white-space: nowrap；
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}*/
+
+
+/* borrowing Bootstrap style for btn elements, but combining styles a bit */
+.jspsych-btn {
+  position: relative;
+  display: inline-block;
+  padding: 12px 12px;
+  margin: 0px;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  cursor: pointer;
+  line-height: 0.8;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -206,3 +227,9 @@
 #jspsych-data-display {
   text-align: left;
 }
+
+
+
+
+
+
