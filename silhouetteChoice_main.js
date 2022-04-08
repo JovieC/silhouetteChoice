@@ -1,14 +1,7 @@
 var timeline = [];
-var repo_site = "https://joviec.github.io/silhouetteChoice/img/";
-
-//var images_block_1 = ['img/finalPicsFemaleG1Age0.1P2FemaleG5Age21P1MaleG3Age8P1MaleG2Age3P2.png', 'img/finalPicsFemaleG1Age0.2P2FemaleG6Age67P1MaleG4Age14P2MaleG2Age2P2.png'];
-
-// preload trial for preloading the block 1 stimuli
-// var preload_1 = {
-//     type: 'preload',
-//     images: images_block_1
-// }
-// timeline.push(preload_1);
+//var repo_site = "https://joviec.github.io/silhouetteChoice/img/";
+//var condition = Qualtrics.SurveyEngine.getEmbeddedData('condition');
+var condition = "baseline";
 
 var pic_list = [
  {
@@ -734,17 +727,6 @@ var pic_list = [
 ]
 
 
-
-
-var welcome = {
-            type: "html-keyboard-response",
-            stimulus: "You will start the choice task now. Please press any key to proceed."
-        };
-
-timeline.push(welcome);
-
-
-
 var picture = [];
 //var picture = '<img src="https://joviec.github.io/silhouetteChoice/img/finalPicsFemaleG1Age0.1P2FemaleG5Age21P1MaleG3Age8P1MaleG2Age3P2.png"/>'
 for (i = 0; i < pic_list.length; i++) {
@@ -769,6 +751,45 @@ for (i = 0; i < picture.length; i++) {
   var imgsrc = "<img src=\"" + picture[i] + "\"/>";
   stimuli.push(imgsrc);
 }
+
+
+var welcome = {
+            type: "html-keyboard-response",
+            stimulus: "You will start the choice task now. Please press any key to proceed."
+        };
+
+timeline.push(welcome);
+
+
+// if (condition == "baseline") {
+
+//                 var instruction = {
+//                     type: 'html-keyboard-response',
+//                     stimulus: 'Please press any key to proceed.'
+//                     //trial_duration: 2000,
+//                     //choices: jsPsych.NO_KEYS,
+//                     //response_ends_trial: false
+//                 };
+//                 timeline.push(instruction);
+//               }
+
+
+// var baselineInstr = {
+//     type: 'instructions',
+//     pages: [
+//     `We are interested in your opinions about saving different human lives. 
+//     \nThere are situations when resources are limited and not all human lives can be saved. 
+//     \nImagine you are the captain of a ship. One day, a storm hits your ship and it is sinking. 
+//     \n However, not enough lifeboats are available, so you can only save some of your passengers. 
+//     \n\n Please press any key to proceed.`,
+//     'This is the second page of instructions.',
+//     'This is the final page.'
+//     ],
+//     show_clickable_nav: true
+// }
+// timeline.push(baselineInstr);
+
+
 
 //var shuffleTrials = jsPsych.randomization.repeat(picture,1);
 
