@@ -808,7 +808,7 @@ for (var values of stimuli) {
       stimulus: values,
       //stimulus: '<img src="https://joviec.github.io/silhouetteChoice/img/finalPicsFemaleG1Age0.1P2FemaleG5Age21P1MaleG3Age8P1MaleG2Age3P2.png"/>',
       choices: [' ',' ',' ',' '],
-      button_html: ['<button class="jspsych-btn" style = "position:relative; left:-135px; top: -400px">%choice%</button>', //upper left
+      button_html: ['<button class="jspsych-btn" style = "position:relative; left:-135px; top: -400px">%choice%</button>, padding: 12px 12px';//upper left
                     '<button class="jspsych-btn" style = "position:relative; right:-200px; top: -400px">%choice%</button>', //upper right 
                     '<button class="jspsych-btn" style = "position:relative; left:160px; top: -80px">%choice%</button>', //lower right
                     '<button class="jspsych-btn" style = "position:relative; right:255px; top: -80px">%choice%</button>'] //lower left
