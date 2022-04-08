@@ -216,7 +216,7 @@ var pic_list = [
    "name": "finalPicsFemaleG1Age0.5P1FemaleG5Age23P1FemaleG3Age5P2FemaleG4Age16P2.png"
  },
  {
-   "name": "finalPicsMaleG3Age6P2MaleG2Age4P2MaleG5Age22P2MaleG1Age0.4P2.png.png"
+   "name": "finalPicsMaleG3Age6P2MaleG2Age4P2MaleG5Age22P2MaleG1Age0.4P2.png"
  },
  {
    "name": "finalPicsMaleG4Age19P1MaleG2Age2P1FemaleG6Age71P1MaleG1Age1.3P1.png"
