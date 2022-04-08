@@ -216,7 +216,7 @@ var pic_list = [
    "name": "finalPicsFemaleG1Age0.5P1FemaleG5Age23P1FemaleG3Age5P2FemaleG4Age16P2.png"
  },
  {
-   "name": "finalPicsMaleG3Age6P2MaleG2Age4P2MaleG5Age22P2MaleG1Age0.4P2.png"
+   "name": "finalPicsMaleG3Age6P2MaleG2Age4P2MaleG5Age22P2MaleG1Age0.4P2.png.png"
  },
  {
    "name": "finalPicsMaleG4Age19P1MaleG2Age2P1FemaleG6Age71P1MaleG1Age1.3P1.png"
@@ -733,23 +733,7 @@ var pic_list = [
  }
 ]
 
-// for(i = 0; i < pic_list.length; i++) {
-//   var picture = new Object();
-//   picture.name = repo_site + pic_list.name[i];
-//   timeline.push(picture);
-// }
 
-//var images = issue_list.map(x => "https://social-cognitive-neuroscience-lab.github.io/SocialValuesTask/img/" + x.For);
-
-// var images = pic_list.map(x => "https://joviec.github.io/silhouetteChoice/img/" + x.name);
-// var preload_pic = {
-//       type:'preload',
-//       auto_preload:true,
-//       images: images,
-//       max_load_time: 1000000
-//   };
-
-// timeline.push(preload_pic);
 
 
 var welcome = {
@@ -759,12 +743,30 @@ var welcome = {
 
 timeline.push(welcome);
 
+// var picture = [];
+// //var picture = '<img src="https://joviec.github.io/silhouetteChoice/img/finalPicsFemaleG1Age0.1P2FemaleG5Age21P1MaleG3Age8P1MaleG2Age3P2.png"/>'
+// for (i = 0; i < pic_list.length; i++) {
+//   var source = "<img src=\"" + "https://joviec.github.io/silhouetteChoice/img/" + pic_list[i].name + "\"/>";
+//   picture.push(source);
+// }
+
 var picture = [];
 //var picture = '<img src="https://joviec.github.io/silhouetteChoice/img/finalPicsFemaleG1Age0.1P2FemaleG5Age21P1MaleG3Age8P1MaleG2Age3P2.png"/>'
 for (i = 0; i < pic_list.length; i++) {
-  var source = "<img src=\"" + "https://joviec.github.io/silhouetteChoice/img/" + pic_list[i].name + "\"/>";
+  var source = "https://joviec.github.io/silhouetteChoice/img/" + pic_list[i].name;
   picture.push(source);
 }
+
+
+var preload_pic = {
+      type:'preload',
+      auto_preload:true,
+      images: picture,
+      show_detailed_errors: true,
+      max_load_time: 1000000
+  };
+
+timeline.push(preload_pic);
 
 
 //var shuffleTrials = jsPsych.randomization.repeat(picture,1);
