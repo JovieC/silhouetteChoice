@@ -743,12 +743,7 @@ var welcome = {
 
 timeline.push(welcome);
 
-// var picture = [];
-// //var picture = '<img src="https://joviec.github.io/silhouetteChoice/img/finalPicsFemaleG1Age0.1P2FemaleG5Age21P1MaleG3Age8P1MaleG2Age3P2.png"/>'
-// for (i = 0; i < pic_list.length; i++) {
-//   var source = "<img src=\"" + "https://joviec.github.io/silhouetteChoice/img/" + pic_list[i].name + "\"/>";
-//   picture.push(source);
-// }
+
 
 var picture = [];
 //var picture = '<img src="https://joviec.github.io/silhouetteChoice/img/finalPicsFemaleG1Age0.1P2FemaleG5Age21P1MaleG3Age8P1MaleG2Age3P2.png"/>'
@@ -768,10 +763,16 @@ var preload_pic = {
 
 timeline.push(preload_pic);
 
+var stimuli = [];
+//var picture = '<img src="https://joviec.github.io/silhouetteChoice/img/finalPicsFemaleG1Age0.1P2FemaleG5Age21P1MaleG3Age8P1MaleG2Age3P2.png"/>'
+for (i = 0; i < picture.length; i++) {
+  var imgsrc = "<img src=\"" + picture[i] + "\"/>";
+  stimuli.push(imgsrc);
+}
 
 //var shuffleTrials = jsPsych.randomization.repeat(picture,1);
 
-for (var values of picture) {
+for (var values of stimuli) {
   var fixation = {
       type: 'html-button-response',
       stimulus: ' ',
