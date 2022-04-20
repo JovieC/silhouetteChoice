@@ -1,7 +1,7 @@
 var timeline = [];
 //var repo_site = "https://joviec.github.io/silhouetteChoice/img/";
 //var condition = Qualtrics.SurveyEngine.getEmbeddedData('condition');
-var condition = "baseline";
+//var condition = "baseline";
 
 var pic_list = [
  {
