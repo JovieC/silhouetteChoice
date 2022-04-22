@@ -1,7 +1,26 @@
 var timeline = [];
 //var repo_site = "https://joviec.github.io/silhouetteChoice/img/";
 //var condition = Qualtrics.SurveyEngine.getEmbeddedData('condition');
-//var condition = "baseline";
+var condition = "baseline";
+
+var practice_list = [
+ {
+   "name": "finalPicsFemaleG1Age1.2P2FemaleG6Age88P1MaleG3Age5P1MaleG5Age24P2.png"
+ },
+ {
+   "name": "finalPicsFemaleG1Age0.3P1FemaleG6Age66P1MaleG3Age5P1MaleG2Age2P2.png"
+ },
+ {
+   "name": "finalPicsFemaleG3Age11P2FemaleG2Age4P2MaleG4Age14P1FemaleG5Age29P2.png"
+ },
+ {
+   "name": "finalPicsFemaleG5Age21P2MaleG4Age14P1MaleG1Age0.1P2MaleG3Age5P2.png"
+ },
+ {
+   "name": "finalPicsFemaleG5Age26P1FemaleG6Age72P2MaleG3Age8P2FemaleG1Age1.4P2.png"
+ },
+ ]
+
 
 var pic_list = [
  {
@@ -723,6 +742,24 @@ var pic_list = [
  },
  {
    "name": "finalPicsMaleG6Age70P1FemaleG3Age7P2MaleG2Age3P1P1.png"
+ },
+ {
+   "name": "finalPicsMaleG6AgenaP0FemaleG6AgenaP0.png"
+ },
+ {
+   "name": "finalPics MaleG3AgenaP0FemaleG3AgenaP0.png"
+ },
+ {
+   "name": "finalPics MaleG2AgenaP0FemaleG2AgenaP0.png"
+ },
+ {
+   "name": "finalPics FemaleG5AgenaP0MaleG5AgenaP0.png"
+ },
+ {
+   "name": "finalPics FemaleG4AgenaP0MaleG4AgenaP0.png"
+ },
+ {
+   "name": "finalPics FemaleG1AgenaP0MaleG1AgenaP0.png"
  }
 ]
 
@@ -745,12 +782,21 @@ var preload_pic = {
 
 timeline.push(preload_pic);
 
-var stimuli = [];
+
+var foursilhouettes = [];
 //var picture = '<img src="https://joviec.github.io/silhouetteChoice/img/finalPicsFemaleG1Age0.1P2FemaleG5Age21P1MaleG3Age8P1MaleG2Age3P2.png"/>'
-for (i = 0; i < picture.length; i++) {
+for (i = 0; i < picture.length-6; i++) {
   var imgsrc = "<img src=\"" + picture[i] + "\"/>";
-  stimuli.push(imgsrc);
+  foursilhouettes.push(imgsrc);
 }
+
+var twosilhouettes = [];
+//var picture = '<img src="https://joviec.github.io/silhouetteChoice/img/finalPicsFemaleG1Age0.1P2FemaleG5Age21P1MaleG3Age8P1MaleG2Age3P2.png"/>'
+for (i = picture.length-6; i < picture.length; i++) {
+  var gendersrc = "<img src=\"" + picture[i] + "\"/>";
+  twosilhouettes.push(gendersrc);
+}
+
 
 
 var welcome = {
@@ -759,20 +805,6 @@ var welcome = {
         };
 
 timeline.push(welcome);
-
-
-// if (condition == "baseline") {
-
-//                 var instruction = {
-//                     type: 'html-keyboard-response',
-//                     stimulus: 'Please press any key to proceed.'
-//                     //trial_duration: 2000,
-//                     //choices: jsPsych.NO_KEYS,
-//                     //response_ends_trial: false
-//                 };
-//                 timeline.push(instruction);
-//               }
-
 
 // var baselineInstr = {
 //     type: 'instructions',
@@ -793,7 +825,7 @@ timeline.push(welcome);
 
 //var shuffleTrials = jsPsych.randomization.repeat(picture,1);
 
-for (var values of stimuli) {
+for (var values of foursilhouettes) {
   var fixation = {
       type: 'html-button-response',
       stimulus: ' ',
@@ -816,6 +848,46 @@ for (var values of stimuli) {
   };
   timeline.push(trial);
   };
+
+  var genderChoice = {
+    type: 'html-keyboard-response',
+    if (condition == "baseline") {
+    stimulus: 'Now you will see a few groups of human lives that are the same age but differ in gender.\n\nPlease left click on the one you wish to save. \n\nPlease press any key to continue.'
+    },
+    else if (condition == "negative") {
+    stimulus: 'Now you will see a few groups of human lives that are the same age but differ in gender.\n\nPlease left click on the one you wish to give up. \n\nPlease press any key to continue.' 
+    },
+    else if (condition == "general") {
+    stimulus: 'Now you will see a few groups of human lives that are the same age but differ in gender.\n\nPlease left click on the life the policy should save. \n\nPlease press any key to continue.'
+    },
+  };
+  timeline.push(genderChoice);
+
+
+  for (var valuesNew of twosilhouettes) {
+  //var fixation = {
+  //    type: 'html-button-response',
+  //    stimulus: ' ',
+  //    choices:['+'],
+      //trial_duration: 500,
+  //    response_ends_trial: true
+  //};
+  //timeline.push(fixation);
+
+  var genderTrial = {
+      type: 'html-button-response',
+      stimulus: valuesNew,
+      //stimulus: '<img src="https://joviec.github.io/silhouetteChoice/img/finalPicsFemaleG1Age0.1P2FemaleG5Age21P1MaleG3Age8P1MaleG2Age3P2.png"/>',
+      choices: [' ',' ',' ',' '],
+      button_html: ['<button class="jspsych-btn" style = "position:relative; left:-135px; top: -400px">%choice%</button>',//upper left
+                    '<button class="jspsych-btn" style = "position:relative; right:-200px; top: -400px">%choice%</button>', //upper right 
+                    '<button class="jspsych-btn" style = "position:relative; left:160px; top: -80px">%choice%</button>', //lower right
+                    '<button class="jspsych-btn" style = "position:relative; right:255px; top: -80px">%choice%</button>'] //lower left
+      //prompt: "<p> hello </p>"
+  };
+  timeline.push(genderTrial);
+  };
+
               
 
 // var trials_with_variables1 = {
