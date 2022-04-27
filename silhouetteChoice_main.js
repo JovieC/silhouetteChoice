@@ -1,7 +1,7 @@
 var timeline = [];
 //var repo_site = "https://joviec.github.io/silhouetteChoice/img/";
-var condition = Qualtrics.SurveyEngine.getEmbeddedData('condition');
-//var condition = "general";
+//var condition = Qualtrics.SurveyEngine.getEmbeddedData('condition');
+var condition = "general";
 
 var practice_list = [
  {
@@ -66,7 +66,7 @@ var preload_pic = {
       auto_preload:true,
       images: picture,
       show_detailed_errors: true,
-      load_message: 'Please wait while the files load...',
+      message: 'Please wait while the files load...',
       max_load_time: 1000000
   };
 
@@ -108,18 +108,18 @@ if(condition == "baseline"){
 var intro = {
     type: 'instructions',
     pages: [
-    `We are interested in your opinions about saving different human lives. 
-    <br>There are situations when resources are limited and not all human lives can be saved. 
+    `We are interested in your opinions about <b>saving</b> different human lives. 
+    <br>There are situations when resources are limited and not all human lives can be <b>saved<b>. 
     <br>Imagine you are the captain of a ship. One day, a storm hits your ship and it is sinking. 
-    <br>However, not enough lifeboats are available, so you can only save some of your passengers. 
+    <br>However, not enough lifeboats are available, so you can only <b>save</b> some of your passengers. 
     <br><br>Please click "Next" to proceed.`,
     `In this task, you will see many groups of human lives presented as silhouettes. 
     <br>The number on each silhouette indicates the age of that person and the hairstyle indicates their gender.
-    <br>In each group, please choose one so that person will get on the lifeboat and be saved. 
+    <br>In each group, please choose one so that person will <b>get on the lifeboat and be saved</b>. 
     <br>At the beginning of every trial, you will see a white box with a black fixation cross in the center of the screen.
     <br>Please click it to proceed to the next screen.
     <br>After the black cross disappears, silhouettes will show up. 
-    <br>To make a choice, click on the white box on the silhouette you wish to save. 
+    <br>To make a choice, click on the white box on the silhouette you wish to <b>save</b>. 
     <br>Then, the fixation cross will show up again and please click it to proceed.
     <br><br>Please click "Next" to proceed`,
     `You will do some practice now.
@@ -130,18 +130,18 @@ var intro = {
 } else if (condition == "general") {
 var intro = {
   type: 'instructions',
-  pages: [`We are interested in policy-making about saving different human lives. 
+  pages: [`We are interested in <b>policy-making</b> about saving different human lives. 
   <br>There are situations when resources are limited and not all human lives can be saved. 
   <br>For example, in case a storm hits a ship and it is sinking, yet not enough lifeboats are available,
-  a policy that determines which passengers to save is needed. 
+  a <b>policy</b> that determines which passengers to save is needed. 
   <br><br>Please press "Next" to proceed.`, 
   `In this task, you will see many groups of human lives presented as silhouettes. 
   <br>The number on each silhouette indicates the age of that person and the hairstyle indicates their gender.
-  <br>In each group, please choose one so that person will always be saved in cases of resource shortage.
+  <br>In each group, please choose one so that person will <b>always</b> be saved in cases of resource shortage.
   <br>At the beginning of every trial, you will see a white box with a black fixation cross in the center of the screen.
   <br>Please click it to proceed to the next screen.
   <br>After the black cross disappears, silhouettes will show up. 
-  <br>To make a choice, click on the white box on the silhouette you think the policy should prioritize. 
+  <br>To make a choice, click on the white box on the silhouette the <b>policy</b> should prioritize. 
   <br>Then, the fixation cross will show up again and please click it to proceed.
   <br><br>Please click "Next" to proceed`,
   `You will do some practice now.
@@ -152,18 +152,18 @@ var intro = {
 } else if (condition == "negative") {
   var intro = {
     type: 'instructions',
-    pages: [`We are interested in your opinions about giving up different human lives. 
-    <br>There are situations when resources are limited and some human lives have to be left to die. 
+    pages: [`We are interested in your opinions about <b>giving up</b> different human lives. 
+    <br>There are situations when resources are limited and some human lives have to be <b>left to die</b>. 
     <br>Imagine you are the captain of a ship. One day, a storm hits your ship and it is sinking. 
-    <br>However, not enough lifeboats are available, so you have to let some of your passengers die. 
+    <br>However, not enough lifeboats are available, so you have to <b>let some of your passengers die</b>. 
     <br><br>Please click "Next" to proceed.`,
     `In this task, you will see many groups of human lives presented as silhouettes. 
     <br>The number on each silhouette indicates the age of that person and the hairstyle indicates their gender.
-    <br>In each group, please choose one so that person will be left to die. 
+    <br>In each group, please choose one so that person will be <b>left to die</b>. 
     <br>At the beginning of every trial, you will see a white box with a black fixation cross in the center of the screen.
     <br>Please click it to proceed to the next screen.
     <br>After the black cross disappears, silhouettes will show up. 
-    <br>To make a choice, click on the white box on the silhouette you wish to give up. 
+    <br>To make a choice, click on the white box on the silhouette you wish to <b>give up</b>. 
     <br>Then, the fixation cross will show up again and please click it to proceed.
     <br><br>Please click "Next" to proceed`,
     `You will do some practice now.
@@ -212,16 +212,16 @@ if(condition == "baseline"){
     type: 'instructions',
     pages: [`Imagine you are the captain of a ship. One day, a storm hits your ship, and it is sinking. However, not enough lifeboats are available. 
     <br>Only about one fourth of the passengers can get on a lifeboat and be saved, and you have to decide who will get on.
-    <br>Keep in mind that these are your personal decisions, so please follow your heart. 
+    <br>Keep in mind that these are <b>your personal decisions, so please follow your heart<b>. 
     <br><br>Please click "Next" to start.`],
     show_clickable_nav: true
   };
 } else if (condition == "general"){
   var conditionInst = {
     type: 'instructions',
-    pages: [`Imagine you are making a policy to determine which human lives to save in cases of resource shortage.
+    pages: [`Imagine you are making a <b>policy<b> to determine which human lives to save in cases of resource shortage.
     <br>Only about one fourth of the lives can be saved.
-    <br>Keep in mind that your answers serve as criteria for policies and those you choose to save will always be prioritized in future cases of resource shortage. 
+    <br>Keep in mind that your answers serve as <b>criteria for policies and those you choose to save will always be prioritized in future cases of resource shortage<b>. 
     <br><br>Please click "Next" to start.`],
     show_clickable_nav: true
   };
@@ -229,7 +229,7 @@ if(condition == "baseline"){
   var conditionInst = {
     type: 'instructions',
     pages: [`Imagine you are the captain of a ship. One day, a storm hits your ship, and it is sinking. However, not enough lifeboats are available. 
-    <br>About one fourth of the passengers can not get on a lifeboat, and you have to decide who to let die.
+    <br>About one fourth of the passengers can <b>not<b> get on a lifeboat, and you have to decide who to <b>let die<b>.
     <br>Keep in mind that these are your personal decisions, so please follow your heart. 
     <br><br>Please click "Next" to start.`],
     show_clickable_nav: true
@@ -259,19 +259,19 @@ for (var values of foursilhouettes) {
   if (condition == "baseline") {
     var genderChoice = {
     type: 'instructions',
-    pages: ['Now you will see a few groups of human lives that are the same age but differ in gender.<br>Please left click on the one you wish to save. <br>Please click "Next" to continue.'],
+    pages: ['Now you will see a few groups of human lives that are the same age but differ in gender.<br>Please left click on the one you wish to <b>save<b>. <br>Please click "Next" to continue.'],
     show_clickable_nav: true
     };
   } else if (condition == "negative") {
     var genderChoice = {
      type: 'instructions',
-     pages: ['Now you will see a few groups of human lives that are the same age but differ in gender.<br>Please left click on the one you wish to give up. <br>Please click "Next" to continue.'], 
+     pages: ['Now you will see a few groups of human lives that are the same age but differ in gender.<br>Please left click on the one you wish to <b>give up<b>. <br>Please click "Next" to continue.'], 
      show_clickable_nav: true
     };
   } else if (condition == "general") {
     var genderChoice = {
     type: 'instructions',
-    pages: ['Now you will see a few groups of human lives that are the same age but differ in gender.<br>Please left click on the life the policy should save. <br>Please click "Next" to continue.'],
+    pages: ['Now you will see a few groups of human lives that are the same age but differ in gender.<br>Please left click on the life the <b>policy should save<b>. <br>Please click "Next" to continue.'],
     show_clickable_nav: true
     };
   };
