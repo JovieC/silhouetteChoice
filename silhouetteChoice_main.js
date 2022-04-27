@@ -97,12 +97,13 @@ for (i = picture.length-6; i < picture.length; i++) {
 
 
 
-// var welcome = {
-//             type: "html-keyboard-response",
-//             stimulus: "You will start the choice task now. Please press any key to proceed."
-//         };
+var welcome = {
+            type: "instructions",
+            stimulus: [`You will start the choice task now. Please click "Next" and read the task instructions carefully.`],
+            show_clickable_nav: true
+        };
 
-// timeline.push(welcome);
+timeline.push(welcome);
 
 if(condition == "baseline"){
 var intro = {
