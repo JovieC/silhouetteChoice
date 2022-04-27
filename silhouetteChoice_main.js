@@ -1,7 +1,7 @@
 var timeline = [];
 //var repo_site = "https://joviec.github.io/silhouetteChoice/img/";
-var condition = Qualtrics.SurveyEngine.getEmbeddedData('condition');
-//var condition = "general";
+//var condition = Qualtrics.SurveyEngine.getEmbeddedData('condition');
+var condition = "general";
 
 var practice_list = [
  {
@@ -98,9 +98,10 @@ for (i = picture.length-6; i < picture.length; i++) {
 
 
 var welcome = {
-            type: "instructions",
-            stimulus: [`You will start the choice task now. Please click "Next" and read the task instructions carefully.`],
-            show_clickable_nav: true
+    type: 'instructions',
+    pages: [`You will start the choice task now. 
+    <br><br>Please click "Next", read the task instructions carefully and make decisions accordingly.`],
+    show_clickable_nav: true
         };
 
 timeline.push(welcome);
