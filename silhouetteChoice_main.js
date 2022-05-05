@@ -786,7 +786,7 @@ timeline.push(preload_pic);
 //var practiceTrialNum = new Array(1, 2, 3, 4, 5);
 var practice = [];
 //var picture = '<img src="https://joviec.github.io/silhouetteChoice/img/finalPicsFemaleG1Age0.1P2FemaleG5Age21P1MaleG3Age8P1MaleG2Age3P2.png"/>'
-for (i = 200; i < 206; i++) {
+for (i = 201; i < 206; i++) {
   var practicesrc = "<img src=\"" + picture[i] + "\"/>";
   practice.push(practicesrc);
 }
@@ -913,7 +913,7 @@ for (var practiceValues of practice) {
 
 var finishedPractice = {
   type: 'instructions',
-  pages: ['You have finished the practice, now you will proceed to the formal experiment with the same task. <br><debrief_block>Please click "Next" to proceed.'
+  pages: ['You have finished the practice, now you will proceed to the formal experiment with the same task. <br><br>Please click "Next" to proceed.'
   ],
   show_clickable_nav: true
 };
@@ -1017,11 +1017,9 @@ timeline.push(genderChoice);
 // timeline.push(trials_with_variables1);
 
 var debrief_block = {
-            type: "html-keyboard-response",
-            stimulus: function() {
-                //var responseTimes = jsPsych.data.get().select('rt');
-                //var userChoice = jsPsych.data.get().select('response');
-            return `<p>Press any key to complete the experiment. Thank you!</p>`;
-            }
+            type: "html-button-response",
+            stimulus: 'Please click the button below to complete the experiment. Thank you! ',
+            choices: ' ',
+            response_ends_trial: true
             };
         timeline.push(debrief_block);
