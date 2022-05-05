@@ -972,19 +972,19 @@ for (var values of foursilhouettes) {
   if (condition == "baseline") {
     var genderChoice = {
     type: 'instructions',
-    pages: ['Now you will see a few groups of human lives that are the same age but differ in gender.<br>Please left click on the one you wish to <b>save</b>. <br>Please click "Next" to proceed.'],
+    pages: ['Now you will see a few groups of human lives that are the same age but differ in gender.<br>Please left click on the one you wish to <b>save</b>. <br><br>Please click "Next" to proceed.'],
     show_clickable_nav: true
     };
   } else if (condition == "negative") {
     var genderChoice = {
      type: 'instructions',
-     pages: ['Now you will see a few groups of human lives that are the same age but differ in gender.<br>Please left click on the one you wish to <b>give up</b>. <br>Please click "Next" to proceed.'], 
+     pages: ['Now you will see a few groups of human lives that are the same age but differ in gender.<br>Please left click on the one you wish to <b>give up</b>. <br><br>Please click "Next" to proceed.'], 
      show_clickable_nav: true
     };
   } else if (condition == "general") {
     var genderChoice = {
     type: 'instructions',
-    pages: ['Now you will see a few groups of human lives that are the same age but differ in gender.<br>Please left click on the life the <b>policy should save</b>. <br>Please click "Next" to proceed.'],
+    pages: ['Now you will see a few groups of human lives that are the same age but differ in gender.<br>Please left click on the life the <b>policy should save</b>. <br><br>Please click "Next" to proceed.'],
     show_clickable_nav: true
     };
   };
