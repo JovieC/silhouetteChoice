@@ -830,7 +830,8 @@ var intro = {
     <br>The number on each silhouette indicates the age of that person and the hairstyle indicates their gender.
     <br>In each group, please choose one so that person will <b>get on the lifeboat and be saved</b>. 
     <br>At the beginning of every trial, you will see a white box with a black fixation cross in the center of the screen.
-    <br>Please click it to proceed to the next screen.
+    <br>If you feel tired, you can stay on the fixation cross page and take a rest. 
+    <br>When you are ready, please click on the fixation cross to proceed to the next screen. 
     <br>After the black cross disappears, silhouettes will show up. 
     <br>To make a choice, click on the white box on the silhouette you wish to <b>save</b>. 
     <br>Then, the fixation cross will show up again and please click it to proceed.
@@ -852,7 +853,8 @@ var intro = {
   <br>The number on each silhouette indicates the age of that person and the hairstyle indicates their gender.
   <br>In each group, please choose one so that person will <b>always</b> be saved in cases of resource shortage.
   <br>At the beginning of every trial, you will see a white box with a black fixation cross in the center of the screen.
-  <br>Please click it to proceed to the next screen.
+  <br>If you feel tired, you can stay on the fixation cross page and take a rest. 
+  <br>When you are ready, please click on the fixation cross to proceed to the next screen. 
   <br>After the black cross disappears, silhouettes will show up. 
   <br>To make a choice, click on the white box on the silhouette the <b>policy</b> should prioritize. 
   <br>Then, the fixation cross will show up again and please click it to proceed.
@@ -874,7 +876,8 @@ var intro = {
     <br>The number on each silhouette indicates the age of that person and the hairstyle indicates their gender.
     <br>In each group, please choose one so that person will be <b>left to die</b>. 
     <br>At the beginning of every trial, you will see a white box with a black fixation cross in the center of the screen.
-    <br>Please click it to proceed to the next screen.
+    <br>If you feel tired, you can stay on the fixation cross page and take a rest. 
+    <br>When you are ready, please click on the fixation cross to proceed to the next screen. 
     <br>After the black cross disappears, silhouettes will show up. 
     <br>To make a choice, click on the white box on the silhouette you wish to <b>give up</b>. 
     <br>Then, the fixation cross will show up again and please click it to proceed.
